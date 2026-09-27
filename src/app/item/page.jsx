@@ -1,9 +1,11 @@
 import React from 'react';
-import Item from './item/page'
+
 const page = () => {
-  return (
-   <Item></Item>
-  );
+    return (
+        <div>
+            Item
+        </div>
+    );
 };
 
 export default page;
