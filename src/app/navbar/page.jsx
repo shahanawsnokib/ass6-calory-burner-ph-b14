@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [active, setActive] = useState("workouts");
@@ -12,7 +13,8 @@ const Navbar = () => {
 
         {/* Logo */}
         <div href="/" className="flex items-center gap-2">
-          <img src="/logo.png" alt="" />
+          <Image src="/logo.png" alt="Logo"   width={20}
+                                              height={20} />
           <span className="text-[15px] font-bold tracking-wide text-white">
             FITLOG
           </span>
