@@ -32,7 +32,7 @@ const page = () => {
 
                 {/* Image Column */}
                 <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center">
-                  <Image src='/banner.png' width={300} height={300}/>
+                  <Image src='/banner.png' alt='Banner Image' width={300} height={300}/>
                 </div>
 
             </div>

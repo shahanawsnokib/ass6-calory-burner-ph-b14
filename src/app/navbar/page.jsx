@@ -15,16 +15,16 @@ const Navbar = () => {
         <div href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="Logo"   width={20}
                                               height={20} />
-          <span className="text-[15px] font-bold tracking-wide text-white">
+          <Link  href='/' className="text-[15px] font-bold tracking-wide text-white">
             FITLOG
-          </span>
+          </Link>
         
    </div>
         {/* Middle Navigation */}
         <div className="hidden items-center gap-1 rounded-full bg-[#111214] p-1 md:flex">
 
           <Link
-            href="/workouts"
+            href='/item'
             onClick={() => setActive("workouts")}
             className={`rounded-full px-5 py-2 text-[11px] font-medium transition-all duration-200 ${
               active === "workouts"

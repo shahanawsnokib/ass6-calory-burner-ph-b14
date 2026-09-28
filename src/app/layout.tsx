@@ -26,13 +26,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-theme ="dark"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-     <div className='bg-[#0d0f12]'>
-       <body className="min-h-full  flex flex-col">
+     
+       <body className="min-h-full bg-[#0d0f12] flex flex-col">
         
        <Navbar></Navbar>
         {children}
        <Footer></Footer></body>
-     </div>
+
     </html>
   );
 }
