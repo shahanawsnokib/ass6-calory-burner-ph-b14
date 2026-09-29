@@ -1,14 +1,16 @@
 "use client";
 import React, { useContext } from "react";
 import { ItemContext } from "../../../contex/ItemContexProvide";
+import { toast } from "react-toastify";
 
 const TodayPlaButton = ({ item }) => {
   const { addTodaysPlan, setTodaysPlan } = useContext(ItemContext);
 
   const handleTodayPlan = () => {
-    console.log("triger");
+    // console.log("triger");
     setTodaysPlan([...addTodaysPlan, item]);
-    console.log(item, "From todays plan");
+       toast.success(`This ${item.name} Action to sent to your Save to today List`)
+    // console.log(item, "From todays plan");
     
 
   };

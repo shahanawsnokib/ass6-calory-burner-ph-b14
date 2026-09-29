@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ItemContext } from "../../contex/ItemContexProvide";
 
 const Navbar = () => {
   const [active, setActive] = useState("workouts");
+  const { addTodaysPlan, saveForLatter } = useContext(ItemContext);
+  console.log(addTodaysPlan,saveForLatter, "navber");
+  
 
   return (
     <header className="w-full bg-[#0b0c0f]">
@@ -58,17 +62,17 @@ const Navbar = () => {
           >
             Plan
             <span className="flex h-4 w-4 items-center justify-center rounded-full bg-lime-400 text-[9px] font-bold text-black">
-              0
+              {addTodaysPlan.length}
             </span>
           </Link>
 
           <Link
-            href="/saved"
+            href="/plan"
             className="flex items-center gap-2 text-[11px] text-gray-300 hover:text-white"
           >
             Saved
             <span className="flex h-4 w-4 items-center justify-center rounded-full border border-gray-700 text-[9px] text-gray-400">
-              0
+              {saveForLatter.length}
             </span>
           </Link>
 

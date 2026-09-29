@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div >
    <Banner/>
-   <Item/>
+   < Item/>
    </div>
    
   );

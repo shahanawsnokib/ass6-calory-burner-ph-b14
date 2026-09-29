@@ -179,9 +179,9 @@ const Page = async ({ params }) => {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-6">
-             <Link href="/plan"> <TodaysPlanButton item={item}/> </Link>
+             <TodaysPlanButton item={item}/> 
 
-             <Link href='/plan'><SaveForLatter item={item}> </SaveForLatter></Link>
+             <SaveForLatter item={item}> </SaveForLatter>
             </div>
 
           </div>

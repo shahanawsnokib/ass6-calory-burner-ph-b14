@@ -2,15 +2,17 @@
 "use client"
 import React, { useContext } from "react";
 import { ItemContext } from "../../../contex/ItemContexProvide";
+import { toast } from "react-toastify";
 
 const SaveForLatter = ({item}) => {
 
      const { saveForLatter, setSaveForLatter } = useContext(ItemContext);
     
       const handleSaveLatter = () => {
-        console.log("triger");
+        // console.log("triger");
         setSaveForLatter([...saveForLatter, item]);
-        console.log(item ,"from save latter ");
+        toast.success(`This ${item.name} Action to sent to your Save to Latter List`)
+        // console.log(item ,"from save latter ");
         
     
       };
