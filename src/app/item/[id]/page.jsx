@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
+import TodaysPlanButton from "../../component/planDetailsButton/TodaysPlan";
+import { stringify } from "node:querystring";
+import Link from "next/link";
+import SaveForLatter from "../../component/planDetailsButton/SaveForLatter";
+
 const getItems = async () => {
   const res = await fetch("https://api.abcz.workers.dev/api/fitlog", {
     cache: "no-store",
@@ -18,7 +23,10 @@ const Page = async ({ params }) => {
 
   const items = await getItems();
 
-  const item = items.find((item) => item.id == id);
+  const item = items.find((item) => item.id== id)
+
+  console.log(item , "Id page ");
+  
 
   if (!item) {
     return (
@@ -171,13 +179,9 @@ const Page = async ({ params }) => {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-6">
-              <button className="bg-lime-400 hover:bg-lime-300 text-black font-semibold text-xs px-5 py-3 rounded-lg transition">
-                ⊞ Add to today s plan
-              </button>
+             <Link href="/plan"> <TodaysPlanButton item={item}/> </Link>
 
-              <button className="border border-gray-700 hover:bg-gray-800 text-white text-xs px-5 py-3 rounded-lg transition">
-                ♡ Save for later
-              </button>
+             <Link href='/plan'><SaveForLatter item={item}> </SaveForLatter></Link>
             </div>
 
           </div>

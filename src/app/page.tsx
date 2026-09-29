@@ -3,7 +3,7 @@ import Item from './item/page'
 import Banner from './component/banner/page'
 const page = () => {
   return (
-  <div >
+    <div >
    <Banner/>
    <Item/>
    </div>
