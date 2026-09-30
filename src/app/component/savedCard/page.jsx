@@ -1,3 +1,5 @@
+"use client";
+
 import { ItemContext } from '@/contex/ItemContexProvide';
 import Link from 'next/link';
 import React, { useContext } from 'react';

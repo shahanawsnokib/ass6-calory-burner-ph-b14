@@ -4,6 +4,7 @@ import Link from 'next/link';
 // import ItemDetails from '../../itemDetails/page'
 const ItemCard = ({ item }) => {
     const {
+        id,
         name,
         image,
         muscleGroups,
@@ -15,7 +16,7 @@ const ItemCard = ({ item }) => {
 
     return (
        
- <Link href={`/item/${item.id}`}> 
+ <Link href={`/item/${id}`}> 
         
         <div className="group   w-full max-w-sm overflow-hidden rounded-2xl border border-gray-800/70 bg-[#12151a] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#a6ff00]/40 hover:shadow-xl">
 
