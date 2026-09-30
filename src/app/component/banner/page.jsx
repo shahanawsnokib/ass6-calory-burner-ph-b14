@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
@@ -25,8 +26,8 @@ const page = () => {
                     </p>
 
                     {/* Call to Action Button */}
-                    <button className="mt-4 bg-[#a6ff00] hover:bg-[#93e600] text-black font-extrabold text-xs md:text-sm py-3 px-6 rounded-lg uppercase tracking-wider transition-colors duration-200 cursor-pointer shadow-lg shadow-[#a6ff00]/10">
-                        Browse Workouts
+                    <button  className="mt-4 bg-[#a6ff00] hover:bg-[#93e600] text-black font-extrabold text-xs md:text-sm py-3 px-6 rounded-lg uppercase tracking-wider transition-colors duration-200 cursor-pointer shadow-lg shadow-[#a6ff00]/10">
+                     <Link href="/item">    Browse Workouts</Link>
                     </button>
                 </div>
 

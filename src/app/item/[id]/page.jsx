@@ -1,9 +1,8 @@
-import React from "react";
+
 import Image from "next/image";
 
 import TodaysPlanButton from "../../component/planDetailsButton/TodaysPlan";
-import { stringify } from "node:querystring";
-import Link from "next/link";
+
 import SaveForLatter from "../../component/planDetailsButton/SaveForLatter";
 
 const getItems = async () => {
