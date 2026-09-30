@@ -1,7 +1,7 @@
-
+"use client";
 import { ItemContext } from '@/contex/ItemContexProvide';
 import Link from 'next/link';
-import React, { use, useContext } from 'react';
+import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
 
 const Page = () => {
